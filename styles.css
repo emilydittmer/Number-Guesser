@@ -52,3 +52,107 @@ h3 {
   font-size: 1.5rem;
   margin: .3rem .1rem .4rem .0rem;
 }
+
+h4 {
+  color: 404041;
+}
+
+label {
+  color: 404041;
+}
+
+input {
+  height: 2rem;
+  display: inline-block;
+  width: 30%;
+  font-size: 1.1rem;
+  /*justify-content: space-between;*/
+}
+
+button:enabled {
+  background-color: #6e6e6e;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  width: 80%;
+  padding: .4rem;
+  border-radius: 22px;
+}
+
+button:disabled {
+  background-color: #D0D2D3;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  width: 80%;
+  padding: .4rem;
+  border-radius: 22px;
+}
+
+button:hover {
+  background-color: #DD1972 ;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  width: 80%;
+  padding: .4rem;
+  border-radius: 22px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 25%
+  border-radius: 25px;
+  margin: 2%;
+}
+
+.light {
+  font-weight: 300;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  margin-width: 2%;
+  width: 50%;
+}
+
+.game {
+  margin-top: 0%;
+  background-color: #F7F7F7;
+}
+
+.scoreboard {
+  padding: 2%;
+}
+
+
+form {
+  background-color: #fff;
+  padding: 1rem;
+  margin: 1rem;
+  border: solid #D0D2D3 2px;
+}
+
+article {
+  background-color: #fff;
+  padding: 1rem 0rem 1rem 1rem;
+  margin: 1rem;
+  border: solid #D0D2D3 2px;
+}
+
+
+
+ul {
+  padding: 0;
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+  justify-content: space-around;
+}
