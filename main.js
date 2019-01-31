@@ -8,5 +8,20 @@ var updateBtn = document.querySelector('#update-btn');
 var guessBtn = document.querySelector('#guess-btn');
 var clearBtn = document.querySelector('#clear-btn');
 var resetBtn = document.querySelector('#reset-btn');
-var min = 1;
-var max = 100;
+var randomNum
+
+updateBtn.addEventListener('click', function(e) {
+  e.preventDefault();
+  generateNumber();
+});
+
+function generateNumber() {
+  var min = parseInt(minRange.value) || 1;
+  var max = parseInt(maxRange.value) || 100;
+  randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
+  console.log(randomNum);
+  var updateMin = document.querySelector('.update-min');
+  var updateMax = document.querySelector('.update-max');
+  updateMin.innerText = min;
+  updateMax.innerText = max;
+};

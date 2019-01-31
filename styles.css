@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-body {
+main {
   background-color: lightgrey;
   font-family: 'Open Sans', sans-serif;
   margin: 0;
@@ -12,22 +12,30 @@ body {
 header {
   border: solid grey 2px;
   background-color: #404041;
+  display: block;
   color: #dd1972;
   font-size: 2rem;
-  text-transform: uppercase;
-  text-align: center;
   margin: 0;
 }
 
 h1 {
-  margin-bottom: .1rem;
+  padding-top: 35px;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.light {
+  font-weight: 300;
 }
 
 h2 {
   color: #fff;
   font-weight: 300;
   font-size: 1.5rem;
-  margin: 0;
+  margin: 0px 0px 10px;
+  text-transform: uppercase;
+  text-align: center;
   display: flex;
   background: transparent;
 }
@@ -38,27 +46,58 @@ h2:after {
   content:'';
   flex: 1;
   border-bottom: solid 1px;
-  margin: auto 0.25em; 
+  margin: 10px;
 }
 
-#header-text {
-  height: 200px;
-  width: 560px;
-  margin: 0 auto;
+body {
+  background-color: lightgrey;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 50%;
+}
+
+.game {
+  margin: 0;
+  background-color: #F7F7F7;
+}
+
+.scoreboard {
+  /*padding: 2%;*/
 }
 
 h3 {
-  color: #404041;
-  font-size: 1.5rem;
-  margin: .3rem .1rem .4rem .0rem;
+  color: #6e6e6e;
+  font-size: 1.2rem;
+  margin: 0;
 }
 
 h4 {
-  color: 404041;
+  color: #6e6e6e;
+  font-weight: 300;
+  font-size: 1rem;
+  margin: 15px 3px 2px;
 }
 
-label {
-  color: 404041;
+.show-range {
+  padding: 10px 0px 0px 18px;
+}
+
+article {
+  background-color: #fff;
+  padding: 15px,
+  margin: 20px;
+  border: solid #D0D2D3 2px;
+}
+
+form {
+  background-color: #fff;
+  padding: 15px;
+  margin: 20px;
+  border: solid #D0D2D3 2px;
 }
 
 input {
@@ -66,7 +105,16 @@ input {
   display: inline-block;
   width: 30%;
   font-size: 1.1rem;
-  /*justify-content: space-between;*/
+  justify-content: space-between;
+}
+
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 25%
+  border-radius: 25px;
+  margin: 2%;
 }
 
 button:enabled {
@@ -97,52 +145,6 @@ button:hover {
   width: 80%;
   padding: .4rem;
   border-radius: 22px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  width: 25%
-  border-radius: 25px;
-  margin: 2%;
-}
-
-.light {
-  font-weight: 300;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-}
-
-section {
-  margin-width: 2%;
-  width: 50%;
-}
-
-.game {
-  margin-top: 0%;
-  background-color: #F7F7F7;
-}
-
-.scoreboard {
-  padding: 2%;
-}
-
-
-form {
-  background-color: #fff;
-  padding: 1rem;
-  margin: 1rem;
-  border: solid #D0D2D3 2px;
-}
-
-article {
-  background-color: #fff;
-  padding: 1rem 0rem 1rem 1rem;
-  margin: 1rem;
-  border: solid #D0D2D3 2px;
 }
 
 
