@@ -1,61 +1,67 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Number Guesser</title>
-    <!-- links normalize -->
-    <link rel="stylesheet" type="text/css" href="normalize.css">
-    <!-- links css styles -->
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <!-- links fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open-Sans:300,700" rel="stylesheet">
-    <!-- enables media queries -->
-    <meta name="viewport" content="width= device-width, initial-scale=1">
-</head>
-<main>
-  <header>
-    <h1>Number<span class="light">Guesser</span></h1>
-    <h2>Ultimate Challenger Edition</h2>
-  </header>
-  <section class="game">
-    <article class="range">
-      <h3>Set Range</h3>
-      <form>
-        <label for="minrange"><h4>Min Range</h4></label>
-        <input type="number" id="minrange" name="minrange">
-        <label for="maxrange"><h4>Max Range</h4></label>
-        <input type="number" id="maxrange" name="maxrange">
-        <button type="submit" id="update-btn"> Update </button>
-      </form>
-    </article>
-    <article class="guess">
-      <h4>The Current Range is <span>1</span> to <span>100</span></h4>
-        <form>
-    <h3>Challenger 1</h3>
-      <div>
-        <label for="chal1"><h4>Name</h4></label>
-        <input type="text" id="chal1" name="chal1">
-        <label for="guess1"><h4>Guess</h4></label>
-        <input type="number" id="guess1" name="guess1">
-      </div>
-      <h3>Challenger 2</h3>
-        <div>
-        <label for="chal2"><h4>Name</h4></label>
-        <input type="text" id="chal2" name="chal2">
-        <label for="guess2"><h4>Guess</h4></label>
-        <input type="number" id="guess2" name="guess2">
-      </div>
-      <div class="buttons">
-        <button type="submit" id="guess-btn">Submit Guess</button>
-        <button id="reset-btn">Reset Game</button>
-        <button type="reset" id="clear-btn">Clear Game</button>
-        </form>
-    </article>
-    <article class="score">
-      <h3>Latest Score</h3>
-    </article>
-  </section>
-  <section class="scoreboard"></section>
-</main>
- <script type="text/javascript" src="main.js"></script>
-  </body>
-</html>
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Number Guesser</title>
+        <!-- links normalize -->
+        <link rel="stylesheet" type="text/css" href="normalize.css">
+        <!-- links css styles -->
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <!-- links fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open-Sans:300,700" rel="stylesheet">
+        <!-- enables media queries -->
+        <meta name="viewport" content="width= device-width, initial-scale=1">
+    </head>
+
+    <main>
+      <header>
+        <h1>Number<span class="light">Guesser</span></h1>
+        <h2>Ultimate Challenger Edition</h2>
+      </header>
+      <body>
+      <section class="game">
+        <article class="range">
+          <form>
+            <h3>Set Range</h3>
+            <label for="minrange"><h4>Min Range</h4></label>
+            <input type="number" id="minrange" name="minrange">
+            <label for="maxrange"><h4>Max Range</h4></label>
+            <input type="number" id="maxrange" name="maxrange">
+            <button type="submit" id="update-btn"> Update </button>
+          </form>
+        </article>
+
+        <article class="guess">
+          <h4 class="show-range">The Current Range is <span class="update-min">1</span> to <span class="update-max">100</span>.</h4>
+            <form>
+             <h3>Challenger 1</h3>
+              <div class="player-input">
+                <label for="chal1"><h4>Name</h4></label>
+                <input type="text" id="chal1" name="chal1">
+                <label for="guess1"><h4>Guess</h4></label>
+                <input type="number" id="guess1" name="guess1">
+              </div>
+            <h3>Challenger 2</h3>
+              <div class="player-input">
+                <label for="chal2"><h4>Name</h4></label>
+                <input type="text" id="chal2" name="chal2">
+                <label for="guess2"><h4>Guess</h4></label>
+                <input type="number" id="guess2" name="guess2">
+              </div>
+              <div class="buttons">
+                <button id="guess-btn">Submit Guess</button>
+                <button id="reset-btn">Reset Game</button>
+                <button id="clear-btn">Clear Game</button>
+              </div>
+            </form>
+        </article>
+
+        <article class="score">
+          <h3>Latest Score</h3>
+        </article>
+      </section>
+      <section class="scoreboard"></section>
+    </body>
+    </main>
+     <script type="text/javascript" src="main.js"></script>
+      </body>
+    </html>
