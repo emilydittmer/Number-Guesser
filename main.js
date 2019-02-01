@@ -37,14 +37,26 @@ function getRange() {
   updateMax.innerText = max;
 };
 
-function displayLatest() {
-  chal1.innerText = 
-  var guessOne = parseInt(guess1.value);
-  chal2.innerText = 
-  var guessTwo = parseInt(guess2.value);
-  ***needs html for latest score section***
-}
 
-function compareGuess() {
-  if (guessOne)
-}
+/////pseudocoding
+
+// function displayLatest() {
+//   chal1.innerText = document.queryselector #chal1-name
+//   chal2.innerText assign to html id #chal2-name
+//   guess1.innerText assign to html id #chal1-guess parse value
+//   guess2.innerText assign to html id #chal1-guess parse value
+//   parsed value guessOne if/else if/else
+//   parsed value guessTwo if/else if/else
+//   var guessOne = parseInt(guess1.value);
+//   var guessTwo = parseInt(guess2.value);
+// }
+
+
+// function compareGuess() {
+//   if (guess one is higher than) {
+//     innertext[#chal1-status] 'is too high'
+//     } else if (guess one is lower than) {
+//       innertext[#] 'is too low'
+//     } else 'you got it'
+//   }
+// }
