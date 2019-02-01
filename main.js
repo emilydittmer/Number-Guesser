@@ -12,6 +12,16 @@ var clearBtn = document.querySelector('#clear-btn');
 var resetBtn = document.querySelector('#reset-btn');
 var randomNum
 
+/////default button states
+
+// do we want an onload state or maybe call functions for auto disable? 
+// an onload could also run number generator?
+// updateBtn.disabled = true;
+// guessBtn.disabled = true;
+// clearBtn.disabled = true;
+// resetBtn.disabled = true;
+
+
 /////event listeners
 
 updateBtn.addEventListener('click', function(e) {
@@ -19,10 +29,10 @@ updateBtn.addEventListener('click', function(e) {
   getRange();
 });
 
-guessBtn.addEventlistener('click', function() {
-  displayLatest();
-  compareGuess();
-});
+// guessBtn.addEventlistener('click', function() {
+//   displayLatest();
+//   compareGuess();
+// });
 
 /////functions
 
@@ -38,6 +48,10 @@ function getRange() {
 };
 
 
+function isValidNum(event) {
+  return event.charCode >= 48 && event.charCode <= 57
+};
+
 /////pseudocoding
 
 // function displayLatest() {
@@ -51,12 +65,39 @@ function getRange() {
 //   var guessTwo = parseInt(guess2.value);
 // }
 
-
 // function compareGuess() {
 //   if (guess one is higher than) {
 //     innertext[#chal1-status] 'is too high'
 //     } else if (guess one is lower than) {
 //       innertext[#] 'is too low'
 //     } else 'you got it'
+//   }
+// }
+
+
+/////pseudo button states by action, maybe call onload?
+
+// function updateBtnState() {
+//   // maybe bang operator to indicate "no [value]"
+//   if (nothing in range min or max) {
+//     updateBtn.disabled = true;
+//   } else {
+//     updateBtn.disabled = false;
+//   }
+// }
+
+// function guessBtnState() {
+//   if (no value in chal name or guess inputs) {
+//     submitBtn.disabled = true;
+//   } else {
+//     submitBtn.disabled = false;
+//   }
+// }
+
+// function clearResetBtnState() {
+//   if (no value in chal name or guess inputs)
+//     submitBtn.disabled = true;
+//   } else {
+//     submitBtn.disabled = false;
 //   }
 // }

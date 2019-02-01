@@ -14,8 +14,10 @@
 
     <main>
       <header>
+      <div class="header-txt">
         <h1>Number<span class="light">Guesser</span></h1>
         <h2>Ultimate Challenger Edition</h2>
+      </div>
       </header>
       <body>
       <section class="game">
@@ -23,9 +25,9 @@
           <form>
             <h3>Set Range</h3>
             <label for="minrange"><h4>Min Range</h4></label>
-            <input type="number" id="minrange" name="minrange">
+            <input type="text" id="minrange" name="minrange" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
             <label for="maxrange"><h4>Max Range</h4></label>
-            <input type="number" id="maxrange" name="maxrange">
+            <input type="text" id="maxrange" name="maxrange" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
             <button type="submit" id="update-btn"> Update </button>
           </form>
         </article>
@@ -36,16 +38,16 @@
              <h3>Challenger 1</h3>
               <div class="player-input">
                 <label for="chal1"><h4>Name</h4></label>
-                <input type="text" id="chal1" name="chal1">
+                <input type="text" id="chal1" name="chal1" onkeydown='return event.charCode >= 48 && event.charCode <= 57'>
                 <label for="guess1"><h4>Guess</h4></label>
-                <input type="number" id="guess1" name="guess1">
+                <input type="text" id="guess1" name="guess1" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
               </div>
             <h3>Challenger 2</h3>
               <div class="player-input">
                 <label for="chal2"><h4>Name</h4></label>
-                <input type="text" id="chal2" name="chal2">
+                <input type="text" id="chal2" name="chal2" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
                 <label for="guess2"><h4>Guess</h4></label>
-                <input type="number" id="guess2" name="guess2">
+                <input type="text" id="guess2" name="guess2" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
               </div>
               <div class="buttons">
                 <button id="guess-btn">Submit Guess</button>
@@ -60,13 +62,13 @@
           <div class="chal1-score">
             <h4 id="chal1-name" class="score-name">Challenger 1 Name</h4>
             <h5>current guess</h5>
-            <p id="chal1-guess" class="score-guess"> -- </p>
+            <p id="chal1-guess" class="score-guess">?</p>
             <p id="chal1-status"></p>
           </div>
           <div class="chal2-score">
             <h4 id="chal2-name" class="score-name">Challenger 2 Name</h4>
             <h5>current guess</h5>
-            <p id="chal2-guess" class="score-guess"> -- </p>
+            <p id="chal2-guess" class="score-guess">?</p>
             <p id="chal2-status"></p>
           </div>
         </article>

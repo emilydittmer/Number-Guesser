@@ -14,13 +14,14 @@ header {
   background-color: #404041;
   display: block;
   color: #dd1972;
-  font-size: 2rem;
   margin: 0;
 }
 
 h1 {
   padding-top: 35px;
   margin: 0;
+  font-size: 4rem;
+  font-weight: bolder;
   text-transform: uppercase;
   text-align: center;
 }
@@ -47,6 +48,12 @@ h2:after {
   flex: 1;
   border-bottom: solid 1px;
   margin: 13px;
+}
+
+.header-txt {
+  height: 175px;
+  width: 575px;
+  margin: 0 auto;
 }
 
 body {
@@ -101,16 +108,16 @@ form {
   border: solid #D0D2D3 2px;
 }
 
-/*.player-input {
+.player-input {
   justify-content: space-around;
-}*/
+}
 
 input {
   height: 2rem;
   display: inline-block;
   width: 40%;
   font-size: 1.1rem;
-  /*justify-content: space-between;*/
+  justify-content: space-between;
 }
 
 .buttons {
@@ -159,8 +166,8 @@ button:hover {
   padding: 0rem;
   margin: 15px 25px 0px 25px;
   text-align: center;
-/*  border-left: solid #d0d2d3 1px;
-*/}
+  border-left: solid #d0d2d3 1px;
+}
 
 .score-name {
   font-weight: 700;
@@ -169,11 +176,13 @@ button:hover {
   margin: 0px 15px;
 }
 
-/*.score-guess {
-  font-size: 1.2rem;
+h5 {
+  font-weight: 300;
+  font-size: .9rem;
+  color: #6e6e6e;
   padding: 0;
   margin: 0rem .5rem;
-}*/
+}
 
 .score-guess {
   color: #DD1972;
