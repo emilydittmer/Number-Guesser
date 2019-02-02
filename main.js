@@ -11,11 +11,14 @@ var guessBtn = document.querySelector('#guess-btn');
 var clearBtn = document.querySelector('#clear-btn');
 var resetBtn = document.querySelector('#reset-btn');
 var randomNum
+var updateChal1
+var updateChal2
 
 /////default button states
 
 // do we want an onload state or maybe call functions for auto disable? 
 // an onload could also run number generator?
+//I think onload, the game should run, so updateBtn-disabled, until fields are shown (if possible), clearBtn and resetBtn -disabled and guess- active
 // updateBtn.disabled = true;
 // guessBtn.disabled = true;
 // clearBtn.disabled = true;
@@ -29,10 +32,32 @@ updateBtn.addEventListener('click', function(e) {
   getRange();
 });
 
+// guessBtn.addEventListener('click', function getName() {
+//   updateChal1 = document.querySelector(#chal1).value;
+//   updateChal2 = document.querySelector(#chal2).value;
+// })
+
 // guessBtn.addEventlistener('click', function() {
 //   displayLatest();
 //   compareGuess();
 // });
+
+// // guessBtn.addEventListener('click' function getGameInfo() {
+// //   var updateChal1 =  chal1.value;
+// //   console.log(updateChal1)
+// //   var updateChal2 = chal2.value;
+// //   console.log(updateChal2)
+
+// //   var guess1 = guess1.value; (Possibly needs to be a Global Value)
+// //   var guess2 = guess2.value; (See above)
+// // }
+
+// // function getName() {
+// //   var updateChal1 =  chal1.value;
+// //   var updateChal2 = chal2.value;
+
+// });
+
 
 /////functions
 
@@ -101,3 +126,4 @@ function isValidNum(event) {
 //     submitBtn.disabled = false;
 //   }
 // }
+
