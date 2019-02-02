@@ -13,6 +13,7 @@ var resetBtn = document.querySelector('#reset-btn');
 var randomNum
 var updateChal1
 var updateChal2
+var chal1Name
 
 /////default button states
 
@@ -32,32 +33,11 @@ updateBtn.addEventListener('click', function(e) {
   getRange();
 });
 
-// guessBtn.addEventListener('click', function getName() {
-//   updateChal1 = document.querySelector(#chal1).value;
-//   updateChal2 = document.querySelector(#chal2).value;
-// })
-
-// guessBtn.addEventlistener('click', function() {
-//   displayLatest();
-//   compareGuess();
-// });
-
-// // guessBtn.addEventListener('click' function getGameInfo() {
-// //   var updateChal1 =  chal1.value;
-// //   console.log(updateChal1)
-// //   var updateChal2 = chal2.value;
-// //   console.log(updateChal2)
-
-// //   var guess1 = guess1.value; (Possibly needs to be a Global Value)
-// //   var guess2 = guess2.value; (See above)
-// // }
-
-// // function getName() {
-// //   var updateChal1 =  chal1.value;
-// //   var updateChal2 = chal2.value;
-
-// });
-
+guessBtn.addEventListener('click', function(e) {
+  e.preventDefault();
+  displayNames();
+  displayGuesses();
+});
 
 /////functions
 
@@ -72,10 +52,23 @@ function getRange() {
   updateMax.innerText = max;
 };
 
+function displayNames() {
+  var scoreName1 = document.querySelector('#score-name-1');
+  var scoreName2 = document.querySelector('#score-name-2');
+  var updateChal1 = chal1.value;
+  var updateChal2 = chal2.value;
+  scoreName1.innerText = updateChal1;
+  scoreName2.innerText = updateChal2;
+}
 
-function isValidNum(event) {
-  return event.charCode >= 48 && event.charCode <= 57
-};
+function displayGuesses() {
+  var scoreGuess1 = document.querySelector('#score-guess-1');
+  var scoreGuess2 = document.querySelector('#score-guess-2');
+  var updateGuess1 = guess1.value;
+  var updateGuess2 = guess2.value;  
+  scoreGuess1.innerText = updateGuess1;
+  scoreGuess2.innerText = updateGuess2;
+}
 
 /////pseudocoding
 
