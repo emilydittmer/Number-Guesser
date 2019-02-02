@@ -4,8 +4,8 @@ var minRange = document.querySelector('#minrange');
 var maxRange = document.querySelector('#maxrange');
 var chal1 = document.querySelector('#chal1');
 var chal2 = document.querySelector('#chal2');
-var guess1 = document.querySelector('#guess1');
-var guess2 = document.querySelector('#guess2');
+var guess1;
+var guess2;
 var updateBtn = document.querySelector('#update-btn');
 var guessBtn = document.querySelector('#guess-btn');
 var clearBtn = document.querySelector('#clear-btn');
@@ -35,8 +35,11 @@ updateBtn.addEventListener('click', function(e) {
 
 guessBtn.addEventListener('click', function(e) {
   e.preventDefault();
+  updateGuesses();
   displayNames();
   displayGuesses();
+  displayStatus();
+
 });
 
 /////functions
@@ -63,11 +66,36 @@ function displayNames() {
 
 function displayGuesses() {
   var scoreGuess1 = document.querySelector('#score-guess-1');
-  var scoreGuess2 = document.querySelector('#score-guess-2');
-  var updateGuess1 = guess1.value;
-  var updateGuess2 = guess2.value;  
-  scoreGuess1.innerText = updateGuess1;
-  scoreGuess2.innerText = updateGuess2;
+  var scoreGuess2 = document.querySelector('#score-guess-2'); 
+  scoreGuess1.innerText = guess1;
+  scoreGuess2.innerText = guess2;
+}
+
+function updateGuesses() {
+  guess1 = document.querySelector('#guess1').value;
+  guess2 = document.querySelector('#guess2').value; 
+}
+
+function displayStatus() {
+  var status1 = document.querySelector('#score-guess-1-status');
+  var status2 = document.querySelector('#score-guess-2-status');
+
+
+  if (guess1 > randomNum) {
+    status1.innerText = 'Too High';
+  } else if (guess1 < randomNum) {
+    status1.innerText = 'Too Low';
+  }  else {
+    status1.innerText = 'BOOM!';
+  }
+
+    if (guess2 > randomNum) {
+    status2.innerText = 'Too High';
+  } else if (guess2 < randomNum) {
+    status2.innerText = 'Too Low';
+  }  else {
+    status2.innerText = 'BOOM!';
+  }
 }
 
 /////pseudocoding
