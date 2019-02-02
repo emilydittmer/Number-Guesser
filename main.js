@@ -10,16 +10,16 @@ var updateBtn = document.querySelector('#update-btn');
 var guessBtn = document.querySelector('#guess-btn');
 var clearBtn = document.querySelector('#clear-btn');
 var resetBtn = document.querySelector('#reset-btn');
-var randomNum
-var updateChal1
-var updateChal2
-var chal1Name
+var randomNum;
+var updateChal1;
+var updateChal2;
+// var chal1Name
+
 
 /////default button states
 
-// do we want an onload state or maybe call functions for auto disable? 
-// an onload could also run number generator?
-//I think onload, the game should run, so updateBtn-disabled, until fields are shown (if possible), clearBtn and resetBtn -disabled and guess- active
+// window.onload = 
+
 // updateBtn.disabled = true;
 // guessBtn.disabled = true;
 // clearBtn.disabled = true;
@@ -31,6 +31,7 @@ var chal1Name
 updateBtn.addEventListener('click', function(e) {
   e.preventDefault();
   getRange();
+  clearRangeInputs();
 });
 
 guessBtn.addEventListener('click', function(e) {
@@ -39,8 +40,18 @@ guessBtn.addEventListener('click', function(e) {
   displayNames();
   displayGuesses();
   displayStatus();
-
+  clearGuessInputs();
 });
+
+clearBtn.addEventListener('click', function() {
+  clearGuessInputs()
+});
+
+resetBtn.addEventListener('click', function() {
+  clearRangeInputs();
+  clearGuessInputs();
+  getRange();
+})
 
 /////functions
 
@@ -53,7 +64,36 @@ function getRange() {
   var updateMax = document.querySelector('.update-max');
   updateMin.innerText = min;
   updateMax.innerText = max;
+  clearRangeInputs();
 };
+
+function clearRangeInputs() {
+  minRange.value = "";
+  maxRange.value = "";
+  updateBtn.disabled = true;
+} 
+
+// function updateBtnState() {
+//   if (minRange.value = "" && maxRange.value = "") {
+//     updateBtn.disabled = true;
+//   } else {
+//     updateBtn.disabled = false;
+//   }
+// }
+
+function updateGuesses() {
+  guess1 = document.querySelector('#guess1').value;
+  guess2 = document.querySelector('#guess2').value; 
+}
+
+function clearGuessInputs() {
+  chal1.value = "";
+  chal2.value = "";
+  guess1 = document.querySelector('#guess1').value = "";
+  guess2 = document.querySelector('#guess2').value = "";
+  clearBtn.disabled = true;
+  resetBtn.disabled = true;
+}
 
 function displayNames() {
   var scoreName1 = document.querySelector('#score-name-1');
@@ -71,16 +111,10 @@ function displayGuesses() {
   scoreGuess2.innerText = guess2;
 }
 
-function updateGuesses() {
-  guess1 = document.querySelector('#guess1').value;
-  guess2 = document.querySelector('#guess2').value; 
-}
-
 function displayStatus() {
   var status1 = document.querySelector('#score-guess-1-status');
   var status2 = document.querySelector('#score-guess-2-status');
-
-
+  
   if (guess1 > randomNum) {
     status1.innerText = 'Too High';
   } else if (guess1 < randomNum) {
@@ -89,48 +123,57 @@ function displayStatus() {
     status1.innerText = 'BOOM!';
   }
 
-    if (guess2 > randomNum) {
+  if (guess2 > randomNum) {
     status2.innerText = 'Too High';
   } else if (guess2 < randomNum) {
     status2.innerText = 'Too Low';
   }  else {
     status2.innerText = 'BOOM!';
   }
+  // theWinner();
+  // createCard();
 }
 
-/////pseudocoding
 
-// function displayLatest() {
-//   chal1.innerText = document.queryselector #chal1-name
-//   chal2.innerText assign to html id #chal2-name
-//   guess1.innerText assign to html id #chal1-guess parse value
-//   guess2.innerText assign to html id #chal1-guess parse value
-//   parsed value guessOne if/else if/else
-//   parsed value guessTwo if/else if/else
-//   var guessOne = parseInt(guess1.value);
-//   var guessTwo = parseInt(guess2.value);
-// }
+/////this shit is to get winner and make card and doesn't work
 
-// function compareGuess() {
-//   if (guess one is higher than) {
-//     innertext[#chal1-status] 'is too high'
-//     } else if (guess one is lower than) {
-//       innertext[#] 'is too low'
-//     } else 'you got it'
+// function theWinner(){
+//   var winnerName = document.getElementById('#winner-name');
+//   if (guess1.value == randomNum && guess2.value == randomNum){
+//     winnerName.innerText = 'TIE GAME';
+//   } else if (guess1.value == randomNum){
+//     winnerName.innerText = chal1.value;
+//   } else if (guess2.value == randomNum){
+//     winnerName.innerText = chal2.value;
 //   }
 // }
 
+// function createCard(name1, name2, winnerName) {
+//   var name1 = chal1.value;
+//   var name2 = chal2.value;
+//   var scoreboard = document.querySelector('.scoreboard');
+//   var newCard = 
+//   `<article class="scorecard">
+//       <section class="card">
+//         <h4 class="updateChal1 card-names">${name1}</h4>
+//         <p>vs</p>
+//         <h4 class="updateChal2 card-names">${name2}</h4>
+//       </section>
+//       <section class=“scoreboard”>
+//         <h2 id="winner-name">${winnerName}</h2>
+//         <h2 class="display-winner">WINNER</h2>
+//       </section>
+//       <section class="guesses-time">
+//         <p>num-guesses</p>
+//         <p>time</p>
+//         <button class="close-btn" name="close">X</button>
+//       </section>
+//     </article>`
+//   scoreboard.innerHTML = newCard.innerHTML;
+// }
 
 /////pseudo button states by action, maybe call onload?
 
-// function updateBtnState() {
-//   // maybe bang operator to indicate "no [value]"
-//   if (nothing in range min or max) {
-//     updateBtn.disabled = true;
-//   } else {
-//     updateBtn.disabled = false;
-//   }
-// }
 
 // function guessBtnState() {
 //   if (no value in chal name or guess inputs) {
@@ -146,5 +189,4 @@ function displayStatus() {
 //   } else {
 //     submitBtn.disabled = false;
 //   }
-// }
 
