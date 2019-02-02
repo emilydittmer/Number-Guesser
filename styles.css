@@ -212,3 +212,47 @@ li {
 
 
 /*/////media queries*/
+
+@media only screen and (max-width: 767px) {
+  body {
+    display: inline-block;
+  }
+  section {
+    width: 100%;
+  }
+  /* Doesn't work correctly to make buttons smaller
+  .update-Btn {
+    width: 30%;
+    justify-content: left;
+  }*/
+  .score{
+    display: inline-block;
+  }
+  input{
+    border: #6e6e6e solid 1px;
+    width: 100%;
+  }
+  h1 {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 3.75rem;
+  }
+  #maxrange {
+    margin-bottom: 15px;
+  }
+  #guess1 {
+    margin-bottom: 15px;
+  }
+  .score {
+    width: 100%;
+    margin: 0 auto;
+    /*display:;
+  }
+  */
+  .chal1-score {
+    width: 50%;
+  }
+  .chal2-score {
+    width: 50%;
+  }
+  }
