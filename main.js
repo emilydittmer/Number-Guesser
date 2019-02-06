@@ -4,8 +4,8 @@ var minRange = document.querySelector('#minrange');
 var maxRange = document.querySelector('#maxrange');
 var chal1 = document.querySelector('#chal1');
 var chal2 = document.querySelector('#chal2');
-var guess1;
-var guess2;
+// var guess1 = document.querySelector('#guess1');
+// var guess2 = document.querySelector('#guess2');
 var updateBtn = document.querySelector('#update-btn');
 var guessBtn = document.querySelector('#guess-btn');
 var clearBtn = document.querySelector('#clear-btn');
@@ -14,17 +14,13 @@ var randomNum;
 var updateChal1;
 var updateChal2;
 var winnerName;
-// var chal1Name
 
 
 /////default button states
 
-// window.onload = 
-
-// updateBtn.disabled = true;
-// guessBtn.disabled = true;
-// clearBtn.disabled = true;
-// resetBtn.disabled = true;
+window.onload = function(){
+  // getRange();
+}
 
 
 /////event listeners
@@ -54,6 +50,8 @@ resetBtn.addEventListener('click', function() {
   getRange();
 })
 
+
+
 /////functions
 
 function getRange() {
@@ -69,10 +67,13 @@ function getRange() {
 };
 
 function clearRangeInputs() {
-  minRange.value = "";
-  maxRange.value = "";
+  minRange.value = null;
+  maxRange.value = null;
   updateBtn.disabled = true;
 } 
+
+//if field is min/max field != empty
+//updateBtn
 
 // function updateBtnState() {
 //   if (minRange.value = "" && maxRange.value = "") {
@@ -88,12 +89,12 @@ function updateGuesses() {
 }
 
 function clearGuessInputs() {
-  chal1.value = "";
-  chal2.value = "";
-  guess1 = document.querySelector('#guess1').value = "";
-  guess2 = document.querySelector('#guess2').value = "";
-  clearBtn.disabled = true;
-  resetBtn.disabled = true;
+ chal1.value = null;
+ chal2.value = null;
+ guess1 = document.querySelector('#guess1').value = null;
+ guess2 = document.querySelector('#guess2').value = null;
+ // clearBtn.disabled = true;
+ // resetBtn.disabled = true;
 }
 
 function displayNames() {
@@ -124,6 +125,7 @@ function displayStatus() {
   } else if (parseInt(guess1) === randomNum) {
     status1.innerText = 'BOOM!';
     winnerName = chal1.value;
+      createCard(winnerName);
   }
 
   if (guess2 > randomNum) {
@@ -133,8 +135,8 @@ function displayStatus() {
   } else if (parseInt(guess2) === randomNum) {
     status2.innerText = 'BOOM!';
     winnerName = chal2.value;
+      createCard(winnerName);
   }
-  createCard(winnerName);
 }
 
 
