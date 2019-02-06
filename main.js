@@ -13,6 +13,7 @@ var resetBtn = document.querySelector('#reset-btn');
 var randomNum;
 var updateChal1;
 var updateChal2;
+var winnerName;
 // var chal1Name
 
 
@@ -114,63 +115,53 @@ function displayGuesses() {
 function displayStatus() {
   var status1 = document.querySelector('#score-guess-1-status');
   var status2 = document.querySelector('#score-guess-2-status');
-  
+  var winnerName;
+
   if (guess1 > randomNum) {
     status1.innerText = 'Too High';
   } else if (guess1 < randomNum) {
     status1.innerText = 'Too Low';
-  }  else {
+  } else if (parseInt(guess1) === randomNum) {
     status1.innerText = 'BOOM!';
+    winnerName = chal1.value;
   }
 
   if (guess2 > randomNum) {
     status2.innerText = 'Too High';
   } else if (guess2 < randomNum) {
     status2.innerText = 'Too Low';
-  }  else {
+  } else if (parseInt(guess2) === randomNum) {
     status2.innerText = 'BOOM!';
+    winnerName = chal2.value;
   }
-  // theWinner();
-  // createCard();
+  createCard(winnerName);
 }
 
 
-/////this shit is to get winner and make card and doesn't work
-
-// function theWinner(){
-//   var winnerName = document.getElementById('#winner-name');
-//   if (guess1.value == randomNum && guess2.value == randomNum){
-//     winnerName.innerText = 'TIE GAME';
-//   } else if (guess1.value == randomNum){
-//     winnerName.innerText = chal1.value;
-//   } else if (guess2.value == randomNum){
-//     winnerName.innerText = chal2.value;
-//   }
-// }
-
-// function createCard(name1, name2, winnerName) {
-//   var name1 = chal1.value;
-//   var name2 = chal2.value;
-//   var scoreboard = document.querySelector('.scoreboard');
-//   var newCard = 
-//   `<article class="scorecard">
-//       <section class="card">
-//         <h4 class="updateChal1 card-names">${name1}</h4>
-//         <p>vs</p>
-//         <h4 class="updateChal2 card-names">${name2}</h4>
-//       </section>
-//       <section class=“scoreboard”>
-//         <h2 id="winner-name">${winnerName}</h2>
-//         <h2 class="display-winner">WINNER</h2>
-//       </section>
-//       <section class="guesses-time">
-//         <p>num-guesses</p>
-//         <p>time</p>
-//         <button class="close-btn" name="close">X</button>
-//       </section>
-//     </article>`
-//   scoreboard.innerHTML = newCard.innerHTML;
-// }
+function createCard(winnerName) {
+  var name1 = chal1.value;
+  var name2 = chal2.value;
+  var winnerCard = winnerName;
+  var scoreboard = document.querySelector('.scoreboard');
+  var newCard =
+  `<article class="scorecard">
+      <section class="card">
+        <h4 class="updateChal1 card-names">${name1}</h4>
+        <p>vs</p>
+        <h4 class="updateChal2 card-names">${name2}</h4>
+      </section>
+      <section class=“scoreboard”>
+        <h2 id="winner-name">${winnerCard}</h2>
+        <h2 class="display-winner">WINNER</h2>
+      </section>
+      <section class="guesses-time">
+        <p>num-guesses</p>
+        <p>time</p>
+        <button class="close-btn" name="close">X</button>
+      </section>
+    </article>`
+  scoreboard.innerHTML += newCard;
+}
 
 /////pseudo button states by action, maybe call onload?
 
