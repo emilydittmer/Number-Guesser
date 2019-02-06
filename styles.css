@@ -72,7 +72,8 @@ section {
 }
 
 .scoreboard {
-  /*padding: 2%;*/
+  margin: 0;
+  background-color: #F7F7F7;
 }
 
 h3 {
@@ -253,7 +254,18 @@ li {
   }
   .chal1-score {
     width: 50%;
+    margin: 0 auto;
   }
   .chal2-score {
     width: 50%;
+    margin: 0 auto;
   }
+  .score h3 {
+    text-align: left;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+}
