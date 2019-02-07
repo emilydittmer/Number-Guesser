@@ -211,17 +211,6 @@ h5 {
   color: ;
 }
 
-/*ul {
-  padding: 0;
-  display: flex;
-}
-
-li {
-  list-style-type: none;
-  justify-content: space-around;
-}*/
-
-
 /*/////media queries*/
 
 @media only screen and (max-width: 800px) {
