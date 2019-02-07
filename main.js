@@ -4,8 +4,6 @@ var minRange = document.querySelector('#minrange');
 var maxRange = document.querySelector('#maxrange');
 var chal1 = document.querySelector('#chal1');
 var chal2 = document.querySelector('#chal2');
-// var guess1 = document.querySelector('#guess1');
-// var guess2 = document.querySelector('#guess2');
 var updateBtn = document.querySelector('#update-btn');
 var guessBtn = document.querySelector('#guess-btn');
 var clearBtn = document.querySelector('#clear-btn');
@@ -78,17 +76,6 @@ function clearRangeInputs() {
   updateBtn.disabled = true;
 } 
 
-//if field is min/max field != empty
-//updateBtn
-
-// function updateBtnState() {
-//   if (minRange.value = "" && maxRange.value = "") {
-//     updateBtn.disabled = true;
-//   } else {
-//     updateBtn.disabled = false;
-//   }
-// }
-
 function updateGuesses() {
   guess1 = document.querySelector('#guess1').value;
   guess2 = document.querySelector('#guess2').value; 
@@ -145,7 +132,6 @@ function displayStatus() {
   }
 }
 
-
 function createCard(winnerName) {
   var name1 = chal1.value;
   var name2 = chal2.value;
@@ -171,23 +157,3 @@ function createCard(winnerName) {
     </article>`
   scoreboard.innerHTML += newCard;
 }
-
-
-/////pseudo button states by action, maybe call onload?
-
-
-// function guessBtnState() {
-//   if (no value in chal name or guess inputs) {
-//     submitBtn.disabled = true;
-//   } else {
-//     submitBtn.disabled = false;
-//   }
-// }
-
-// function clearResetBtnState() {
-//   if (no value in chal name or guess inputs)
-//     submitBtn.disabled = true;
-//   } else {
-//     submitBtn.disabled = false;
-//   }
-
