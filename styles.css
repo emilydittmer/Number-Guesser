@@ -107,7 +107,7 @@ article {
 }
 
 form {
-  /*display: flex;*/
+  
   background-color: #fff;
   padding: 15px;
   margin: 20px;
@@ -124,6 +124,7 @@ input {
   width: 40%;
   font-size: 1.1rem;
   justify-content: space-between;
+  border: #6e6e6e solid 1px;
 }
 
 .buttons {
@@ -303,7 +304,7 @@ h5 {
   .score {
     width: 100%;
     margin: 0 auto;
-    
+
   }
   .chal1-score {
     width: 50%;
