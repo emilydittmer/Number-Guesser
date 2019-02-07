@@ -154,13 +154,15 @@ function createCard(winnerName) {
   var newCard =
   `<article class="scorecard">
       <section class="card">
-        <h4 class="updateChal1 card-names">${name1}
-        <span>vs</span> ${name2}</h4>
+        <h4 class="updateChal1-card-names">${name1}
+        vs ${name2}</h4>
       </section>
+      <hr>
       <section class=“scoreboard-winner”>
         <h2 id="winner-name">${winnerCard}</h2>
         <h3 class="display-winner">WINNER</h2>
       </section>
+      <hr>
       <section class="guesses-time">
         <p>num-guesses</p>
         <p>time</p>

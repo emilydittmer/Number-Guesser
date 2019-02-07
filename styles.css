@@ -214,6 +214,11 @@ h5 {
 
 .card {
   display: inline-flex;
+  margin: 5 auto;
+}
+
+.updateChal1-card-names {
+  margin: 5 auto;
 }
 
 .scorecard h4{
@@ -228,8 +233,37 @@ h5 {
   color: #6e6e6e;
   text-transform: uppercase;
   text-align: center;
+  font-size: 3rem;
   font-weight: 700;
+  margin: 0 auto;
 }
+.scorecard section {
+  width: 100%;
+  text-align: center;
+}
+.scorecard h3 {
+  font-size: 2rem;
+  font-weight: 100;
+  text-align: center;
+}
+.guesses-time {
+  display: inline-flex;
+}
+
+.guesses-time {
+  display: flex;
+}
+
+.guesses-time{
+  flex: 1;
+  justify-content: space-around;
+}
+.scorecard button {
+  width: 30px;
+  height: 30px;
+  margin: 15px;
+}
+
 
 /*/////media queries*/
 
@@ -239,6 +273,9 @@ h5 {
   }
   section {
     width: 100%;
+  }
+  main {
+    display: block;
   }
   /* Doesn't work correctly to make buttons smaller
   .update-Btn {
@@ -266,7 +303,7 @@ h5 {
   .score {
     width: 100%;
     margin: 0 auto;
-    /*display:;*/
+    
   }
   .chal1-score {
     width: 50%;
