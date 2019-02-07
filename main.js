@@ -19,10 +19,15 @@ var winnerName;
 /////default button states
 
 window.onload = function(){
-  // getRange();
+  generateNum();
 }
 
-
+function generateNum() {
+  var min = 1;
+  var max = 100;
+  randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
+  console.log(randomNum);
+}
 /////event listeners
 
 updateBtn.addEventListener('click', function(e) {
@@ -164,7 +169,6 @@ function createCard(winnerName) {
     </article>`
   scoreboard.innerHTML += newCard;
 }
-
 /////pseudo button states by action, maybe call onload?
 
 
