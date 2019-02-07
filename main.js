@@ -28,6 +28,8 @@ function generateNum() {
   randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
   console.log(randomNum);
 }
+
+
 /////event listeners
 
 updateBtn.addEventListener('click', function(e) {
@@ -54,7 +56,6 @@ resetBtn.addEventListener('click', function() {
   clearGuessInputs();
   getRange();
 })
-
 
 
 /////functions
@@ -98,8 +99,8 @@ function clearGuessInputs() {
  chal2.value = null;
  guess1 = document.querySelector('#guess1').value = null;
  guess2 = document.querySelector('#guess2').value = null;
- // clearBtn.disabled = true;
- // resetBtn.disabled = true;
+ clearBtn.disabled = true;
+ resetBtn.disabled = true;
 }
 
 function displayNames() {
