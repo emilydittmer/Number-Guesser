@@ -22,7 +22,7 @@
         <body>
         <section class="game">
         <article class="range">
-          <form>
+          <form class="range-entries">
             <h3>Set Range</h3>
             <label for="minrange"><h4>Min Range</h4></label>
             <input type="text" id="minrange" name="minrange" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
@@ -34,7 +34,7 @@
 
         <article class="guess">
           <h4 class="show-range">The Current Range is <span class="update-min">1</span> to <span class="update-max">100</span>.</h4>
-            <form>
+            <form class="guess-entries">
              <h3>Challenger 1</h3>
               <div class="player-input">
                 <label for="chal1"><h4>Name</h4></label>
@@ -59,6 +59,7 @@
 
         <article class="score">
           <h3>Latest Score</h3>
+          <section class="score-display">
           <div class="chal1-score">
             <h4 id="score-name-1" class="score-name">Challenger 1 Name</h4>
             <h5>current guess</h5>
@@ -72,6 +73,7 @@
             <p id="score-guess-2" class="score-guess">?</p>
             <p id="score-guess-2-status"></p>
           </div>
+        </section>
         </article>
       </section>
       <section class="scoreboard">

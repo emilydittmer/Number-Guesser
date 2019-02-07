@@ -164,13 +164,15 @@ function createCard(winnerName) {
       </section>
       <hr>
       <section class="guesses-time">
-        <p>num-guesses</p>
-        <p>time</p>
+        <p>2 guesses</p>
+        <p>:49 seconds</p>
         <button class="close-btn" name="close">X</button>
       </section>
     </article>`
   scoreboard.innerHTML += newCard;
 }
+
+
 /////pseudo button states by action, maybe call onload?
 
 
